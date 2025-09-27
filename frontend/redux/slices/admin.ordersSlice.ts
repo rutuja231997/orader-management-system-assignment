@@ -55,7 +55,7 @@ export const fetchOrders = createAsyncThunk<
     const token = state.auth?.token || "";
 
     const { data } = await axios.get(
-      `${process.env.BACKEND_URL}/v1/admin/ordersbyfilter?${query}`,
+       `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/admin/ordersbyfilter?${query}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ export const editOrder = createAsyncThunk<
     const token = state.auth?.token || "";
 
     const { data } = await axios.put(
-      `${process.env.BACKEND_URL}/api/v1/admin/edit-order/${id}`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/admin/edit-order/${id}`,
       updateData,
       {
         headers: {
@@ -131,7 +131,7 @@ export const deleteOrder = createAsyncThunk<
     const token = state.auth?.token || "";
 
     const { data } = await axios.delete(
-      `${process.env.BACKEND_URL}/api/v1/admin/order/${id}`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/admin/order/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
