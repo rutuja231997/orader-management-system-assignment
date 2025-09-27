@@ -24,7 +24,7 @@ export const signUp = createAsyncThunk<
 
   try {
     const res = await axios.post(
-      `${process.env.BACKEND_URL}/api/v1/admin/signup`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/admin/signup`,
       payload,
       { withCredentials: true }
     );
@@ -55,7 +55,7 @@ export const signIn = createAsyncThunk<
   }
   try {
     const res = await axios.post(
-      `${process.env.BACKEND_URL}/api/v1/admin/signin`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/admin/signin`,
       payload,
       { withCredentials: true }
     );
