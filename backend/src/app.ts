@@ -16,7 +16,7 @@ const allowedOrigin = process.env.ALLOWED_ORIGIN || "http://localhost:3000";
 
 app.use(express.json());
 app.use(cors({
-    origin: allowedOrigins,
+    origin: allowedOrigin,
     credentials:true
 }));
 app.use(cookieParser())
