@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchOrders, Order } from "@/redux/slices/admin.ordersSlice";
+import { fetchOrders } from "@/redux/slices/admin.ordersSlice";
+import { Order } from "@/types/order";
 import { RootState, AppDispatch } from "@/redux/store";
 
 import { Button } from "@/components/ui/button-custom";
