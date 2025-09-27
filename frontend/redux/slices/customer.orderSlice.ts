@@ -53,7 +53,7 @@ export const createOrder = createAsyncThunk<
       }
 
       const res = await axios.post(
-        `${process.env.BACKEND_URL}/api/v1/customer/orders`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/customer/orders`,
         formData
       );
 
